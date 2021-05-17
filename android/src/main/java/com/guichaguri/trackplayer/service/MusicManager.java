@@ -132,7 +132,7 @@ public class MusicManager implements OnAudioFocusChangeListener {
                 .build();
         
         player.setAudioAttributes(new com.google.android.exoplayer2.audio.AudioAttributes.Builder()
-                .setContentType(C.CONTENT_TYPE_MUSIC).setUsage(C.USAGE_MEDIA).build()), false;
+                .setContentType(C.CONTENT_TYPE_MUSIC).setUsage(C.USAGE_MEDIA).build(), false);
 
         return new LocalPlayback(service, this, player, cacheMaxSize);
     }
@@ -309,7 +309,7 @@ public class MusicManager implements OnAudioFocusChangeListener {
                     .setAudioAttributes(new AudioAttributes.Builder()
                             .setUsage(AudioAttributes.USAGE_MEDIA)
                             .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                            .build())
+                            .build(), false)
                     .setWillPauseWhenDucked(alwaysPauseOnInterruption)
                     .build();
 
