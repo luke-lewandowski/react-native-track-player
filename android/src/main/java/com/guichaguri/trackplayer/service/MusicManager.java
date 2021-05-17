@@ -309,7 +309,7 @@ public class MusicManager implements OnAudioFocusChangeListener {
                     .setAudioAttributes(new AudioAttributes.Builder()
                             .setUsage(AudioAttributes.USAGE_MEDIA)
                             .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                            .build(), false)
+                            .build())
                     .setWillPauseWhenDucked(alwaysPauseOnInterruption)
                     .build();
 
