@@ -23,7 +23,9 @@ if(file.exists()) {
 }
 
 def safeExtGet(prop, fallback) {
-    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    def code = rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    println "RootProject version $prop $code"
+    return code
 }
 
 android {
